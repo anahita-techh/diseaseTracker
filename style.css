@@ -60,7 +60,7 @@ h2 {
   text-align: center;
   margin-bottom: 14px;
   font-weight: 700;
-  font-size: 28px;   /* 🔥 balanced */
+  font-size: 60px;   /* 🔥 balanced */
   letter-spacing: 0.5px;
   color: rgb(79, 194, 243)
 }
@@ -166,7 +166,7 @@ canvas {
   background: none;
   border: none;
 
-  font-size: 24px;
+  font-size: 35px;
   color: #333;
 
   cursor: pointer;
@@ -302,12 +302,12 @@ canvas {
 }
 
 .top-header h1 {
-  font-size: 30px;
+  font-size: 50px;
   color: white;
   font-weight: 700;
 }
 
 .top-header p {
-  font-size: 15px;
+  font-size: 35px;
   color: rgba(255,255,255,0.85);
 }
