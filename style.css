@@ -62,6 +62,7 @@ h2 {
   font-weight: 700;
   font-size: 28px;   /* 🔥 balanced */
   letter-spacing: 0.5px;
+  color: rgb(79, 194, 243)
 }
 
 h3, h4, p {
@@ -124,7 +125,10 @@ button:hover {
 
 /* Charts */
 canvas {
-  margin-top: 10px;
+   max-width: 400px;   /* 🔥 sweet spot */
+  width: 200%;
+  margin: 20px auto;
+  display: block;
 }
 
 /* 🔥 INSTAGRAM STYLE NAV */
@@ -234,13 +238,13 @@ canvas {
 
 .chart-toggle button {
   flex: 1;
-  padding: 10px;
+  padding: 14px;
   border-radius: 10px;
   border: none;
 
   background: rgba(255,255,255,0.3);
   color: white;
-  font-size: 13px;
+  font-size: 20px;
 
   cursor: pointer;
 }
@@ -298,12 +302,12 @@ canvas {
 }
 
 .top-header h1 {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   font-weight: 700;
 }
 
 .top-header p {
-  font-size: 12px;
+  font-size: 15px;
   color: rgba(255,255,255,0.85);
 }
