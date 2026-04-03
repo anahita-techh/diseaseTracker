@@ -140,7 +140,7 @@ canvas {
 
   width: 200%;
   max-width: 900px;
-  height: 70px;
+  height: 90px;
 
   display: flex;
   justify-content: space-around;
@@ -197,7 +197,7 @@ canvas {
 
   color: white;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 30px;
 
   display: none;
 
