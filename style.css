@@ -25,48 +25,42 @@ body {
   justify-content: center;
   align-items: flex-start;
 
-  padding-top: 90px;   /* space for header */
-  padding-bottom: 120px; /* space for nav */
+  padding-top: 120px;   /* 🔥 FIXED (more space for header) */
+  padding-bottom: 100px; /* 🔥 balanced with nav */
 
   background: rgba(0, 0, 0, 0.45);
 }
 
 /* MAIN CARD */
 .container {
-  width: 92%;              /* 🔥 fills screen */
-  max-width: 420px;        /* mobile width */
+  width: 94%;              /* 🔥 slightly wider */
+  max-width: 430px;        /* 🔥 increased */
 
   margin: 0 auto;
 
-  padding: 20px;
+  padding: 22px;
   border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(18px);
 
-  border: none;
-  box-shadow: none;
-
   text-align: center;
   color: white;
 
   animation: fadeIn 0.5s ease;
-
-  transform: scale(1.08);  /* 🔥 ZOOM EFFECT */
-  transform-origin: center;
 }
 
-/* Make everything slightly bigger */
+/* Make everything slightly bigger (REAL scaling) */
 .container * {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 /* Headings */
 h2 {
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;   /* 🔥 balanced */
   letter-spacing: 0.5px;
 }
 
@@ -77,8 +71,8 @@ h3, h4, p {
 /* Inputs */
 select, input {
   width: 100%;
-  padding: 14px;
-  margin: 10px 0;
+  padding: 16px;   /* 🔥 bigger */
+  margin: 12px 0;
 
   border-radius: 12px;
   border: none;
@@ -102,8 +96,8 @@ select option {
 /* Buttons */
 button {
   width: 100%;
-  padding: 14px;
-  margin-top: 10px;
+  padding: 16px;   /* 🔥 bigger */
+  margin-top: 12px;
 
   border: none;
   border-radius: 12px;
@@ -123,9 +117,9 @@ button:hover {
 /* Top card */
 .top-card {
   background: rgba(255,255,255,0.2);
-  padding: 14px;
+  padding: 16px;
   border-radius: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 /* Charts */
@@ -136,12 +130,12 @@ canvas {
 /* 🔥 INSTAGRAM STYLE NAV */
 .bottom-nav {
   position: fixed;
-  bottom: 10px;
+  bottom: 15px;   /* 🔥 spacing fix */
   left: 50%;
   transform: translateX(-50%);
 
-  width: 92%;
-  max-width: 420px;
+  width: 94%;
+  max-width: 430px;
   height: 70px;
 
   display: flex;
@@ -168,7 +162,7 @@ canvas {
   background: none;
   border: none;
 
-  font-size: 24px;   /* 🔥 bigger icons */
+  font-size: 24px;
   color: #333;
 
   cursor: pointer;
@@ -190,7 +184,7 @@ canvas {
 /* Notification */
 .notification {
   position: fixed;
-  top: 110px;
+  top: 130px;   /* 🔥 adjusted for header */
   left: 50%;
   transform: translateX(-50%);
 
@@ -249,7 +243,6 @@ canvas {
   font-size: 13px;
 
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .chart-toggle button.active {
@@ -283,17 +276,17 @@ canvas {
 /* 🔥 HEADER FIX */
 .top-header {
   position: fixed;
-  top: 10px;
+  top: 20px;   /* 🔥 better spacing */
   left: 50%;
   transform: translateX(-50%);
 
-  width: 92%;
-  max-width: 420px;
-  height: 80px;
+  width: 94%;
+  max-width: 430px;
+
+  padding: 12px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   background: rgba(0, 0, 0, 0.6);
@@ -305,7 +298,7 @@ canvas {
 }
 
 .top-header h1 {
-  font-size: 22px;  /* 🔥 fixed (was too big/small mismatch) */
+  font-size: 20px;
   color: white;
   font-weight: 700;
 }
