@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app-wrapper">
+
+  <div class="container">
+
+    <h2>👤 Profile</h2>
+
+    <div class="profile-card">
+      <p><strong>Region:</strong> <span id="pRegion"></span></p>
+      <p><strong>Disease:</strong> <span id="pDisease"></span></p>
+      <p><strong>Threshold:</strong> <span id="pThreshold"></span></p>
+    </div>
+
+    <button onclick="goToForm()">✏️ Edit Preferences</button>
+
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+  <button onclick="goHome()"><i class="fas fa-home"></i></button>
+  <button class="active"><i class="fas fa-user-circle"></i></button>
+  <button onclick="goToForm()"><i class="fas fa-cog"></i></button>
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

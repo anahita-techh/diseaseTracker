@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Disease Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class = "top-header">
+<h2>Waterborne Disease Tracker</h2>
+<p style="text-align:center; color:rgb(169, 227, 247); margin-top:-10px;">
+  Real-time Disease Monitoring System
+</p>
+</div>
+
+<div class="app-wrapper">
+<div class = container>
+<div class="top-bar">
+  <i class="fas fa-water"></i>
+  <span>Disease Dashboard</span>
+</div>
+
+
+
+<p class="total-cases">Total Cases: <span id="totalCases">0</span></p>
+
+<div class="top-card">
+  <p>🔥 Top Affected Region</p>
+  <h3 id="topRegion">--</h3>
+</div>
+
+<select id="region" onchange="updateChart()">
+  <option value="">🌍 All Regions</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Delhi">Delhi</option>
+  <option value="Pune">Pune</option>
+</select>
+
+<select id="disease" onchange="updateChart()">
+  <option value="All">🦠 All Diseases</option>
+  <option value="Cholera">Cholera</option>
+  <option value="Dengue">Dengue</option>
+  <option value="Typhoid">Typhoid</option>
+</select>
+
+
+<div id="notification" class="notification"></div>
+
+<button onclick="goToForm()">⚙️ User Settings</button>
+<button onclick="checkAlert()">🚨 Check Alert</button>
+
+<!-- Loader -->
+<div id="loader" class="loader"></div>
+
+<h4 style="margin-top:20px;">📊 Disease Distribution</h4>
+<!-- Toggle Buttons -->
+<!-- Toggle -->
+<div class="chart-toggle">
+  <button id="pieBtn" onclick="showPie()">📊 Distribution</button>
+  <button id="trendBtn" onclick="showTrend()">📈 Trend</button>
+</div>
+
+<!-- Charts -->
+<div id="pieContainer">
+  <canvas id="myChart"></canvas>
+</div>
+
+<div id="trendContainer" style="display:none;">
+  <canvas id="trendChart"></canvas>
+</div>
+</div>
+</div>
+
+<div class="bottom-nav">
+  <button class="active"><i class="fas fa-home"></i></button>
+  <button onclick="goToProfile()"><i class="fas fa-user-circle"></i></button>
+  <button onclick="goToForm()"><i class="fas fa-cog"></i></button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

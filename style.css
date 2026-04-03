@@ -1,0 +1,340 @@
+/* Reestyle */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body (DO NOT TOUCH BACKGROUND 😌) */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  background: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Wrapper - MOBILE APP STYLE */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 40px;
+  padding-bottom: 140px;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* MAIN CARD */
+.container {
+  width: 100%;
+  max-width: 420px;
+
+  margin: auto;
+
+  padding: 20px;
+  border-radius: 0;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+
+  border: none;
+  box-shadow: none;
+
+  text-align: center;
+  color: white;
+
+  animation: fadeIn 0.5s ease;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+}
+
+h3, h4, p {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Inputs */
+select, input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255,255,255,0.2);
+  color: white;
+
+  outline: none;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Dropdown */
+select option {
+  color: black;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.25);
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.03);
+}
+
+/* Top card */
+.top-card {
+  background: rgba(255,255,255,0.2);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Charts */
+canvas {
+  margin-top: 10px;
+}
+
+/* 🔥 FULL WIDTH BOTTOM NAV */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-evenly; /* tighter spacing */
+  align-items: center;
+
+  padding: 0 10px;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  z-index: 1000;
+}
+
+/* Nav buttons */
+.bottom-nav button {
+  flex: 1; /* equal width */
+  max-width: 80px;
+
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+
+  cursor: pointer;
+
+  opacity: 0.6;
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.bottom-nav button i {
+  display: block;
+  text-align: center;
+}
+
+/* Active nav */
+.bottom-nav button.active {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+.bottom-nav button.active i {
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+/* Hover */
+.bottom-nav button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 14px 22px;
+  border-radius: 12px;
+
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+
+  display: none;
+
+  backdrop-filter: blur(10px);
+  background: rgba(255, 75, 75, 0.85);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+  z-index: 2000;
+
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toggle */
+.chart-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.chart-toggle button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255,255,255,0.3);
+  color: white;
+  font-size: 13px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chart-toggle button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.chart-toggle button.active {
+  background: rgba(255,255,255,0.6);
+  color: black;
+  font-weight: 600;
+}
+
+/* Chart containers */
+#pieContainer,
+#trendContainer {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Profile */
+.profile-card {
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+  color: white;
+  text-align: left;
+}
+
+/* Top Header */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  z-index: 1000;
+}
+
+.top-header h1 {
+  font-size: 40px;
+  color: white;
+  font-weight: 700;
+}
+
+.top-header p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* 🔥 MOBILE ZOOM EFFECT */
+@media (max-width: 500px) {
+  .container {
+    transform: scale(1.8); /* 🔥 MUCH MORE ZOOM */
+    transform-origin: top center;
+
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .app-wrapper {
+    padding-top: 80px;  /* push down from header */
+    padding-bottom: 200px; /* avoid nav overlap */
+  }
+}
