@@ -33,8 +33,8 @@ body {
 
 /* MAIN CARD */
 .container {
-  width: 96%;          /* 🔥 almost full screen */
-  max-width: 600px;    /* 🔥 INCREASED BIG TIME */
+  width: 100%;          /* 🔥 almost full screen */
+  max-width: 700px;    /* 🔥 INCREASED BIG TIME */
 
   margin: 0 auto;
 
@@ -134,8 +134,8 @@ canvas {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 96%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 700px;
   height: 70px;
 
   display: flex;
@@ -280,8 +280,8 @@ canvas {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 96%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 700px;
 
   padding: 12px;
 
