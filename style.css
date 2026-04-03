@@ -125,7 +125,7 @@ button:hover {
 
 /* Charts */
 canvas {
-   max-width: 400px;   /* 🔥 sweet spot */
+   max-width: 700px;   /* 🔥 sweet spot */
   width: 200%;
   margin: 20px auto;
   display: block;
