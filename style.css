@@ -33,12 +33,12 @@ body {
 
 /* MAIN CARD */
 .container {
-  width: 94%;              /* 🔥 slightly wider */
-  max-width: 430px;        /* 🔥 increased */
+  width: 96%;          /* 🔥 almost full screen */
+  max-width: 600px;    /* 🔥 INCREASED BIG TIME */
 
   margin: 0 auto;
 
-  padding: 22px;
+  padding: 24px;
   border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.15);
@@ -134,8 +134,8 @@ canvas {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 94%;
-  max-width: 430px;
+  width: 96%;
+  max-width: 600px;
   height: 70px;
 
   display: flex;
@@ -280,8 +280,8 @@ canvas {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 94%;
-  max-width: 430px;
+  width: 96%;
+  max-width: 600px;
 
   padding: 12px;
 
