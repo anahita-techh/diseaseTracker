@@ -1,5 +1,4 @@
 /* Reestyle */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,21 +25,21 @@ body {
   justify-content: center;
   align-items: flex-start;
 
-  padding-top: 40px;
-  padding-bottom: 140px;
+  padding-top: 90px;   /* space for header */
+  padding-bottom: 120px; /* space for nav */
 
   background: rgba(0, 0, 0, 0.45);
 }
 
 /* MAIN CARD */
 .container {
-  width: 100%;
-  max-width: 420px;
+  width: 92%;              /* 🔥 fills screen */
+  max-width: 420px;        /* mobile width */
 
-  margin: auto;
+  margin: 0 auto;
 
   padding: 20px;
-  border-radius: 0;
+  border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(18px);
@@ -52,6 +51,14 @@ body {
   color: white;
 
   animation: fadeIn 0.5s ease;
+
+  transform: scale(1.08);  /* 🔥 ZOOM EFFECT */
+  transform-origin: center;
+}
+
+/* Make everything slightly bigger */
+.container * {
+  font-size: 1.05rem;
 }
 
 /* Headings */
@@ -59,7 +66,7 @@ h2 {
   text-align: center;
   margin-bottom: 12px;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 32px;
   letter-spacing: 0.5px;
 }
 
@@ -70,10 +77,10 @@ h3, h4, p {
 /* Inputs */
 select, input {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin: 10px 0;
 
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
 
   background: rgba(255,255,255,0.2);
@@ -95,11 +102,11 @@ select option {
 /* Buttons */
 button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin-top: 10px;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
 
   background: rgba(255,255,255,0.25);
   color: white;
@@ -116,8 +123,8 @@ button:hover {
 /* Top card */
 .top-card {
   background: rgba(255,255,255,0.2);
-  padding: 12px;
-  border-radius: 12px;
+  padding: 14px;
+  border-radius: 14px;
   margin-bottom: 12px;
 }
 
@@ -126,63 +133,55 @@ canvas {
   margin-top: 10px;
 }
 
-/* 🔥 FULL WIDTH BOTTOM NAV */
+/* 🔥 INSTAGRAM STYLE NAV */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  width: 100%;
+  width: 92%;
+  max-width: 420px;
   height: 70px;
 
   display: flex;
-  justify-content: space-evenly; /* tighter spacing */
+  justify-content: space-around;
   align-items: center;
 
   padding: 0 10px;
 
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(15px);
 
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 
   z-index: 1000;
 }
 
 /* Nav buttons */
 .bottom-nav button {
-  flex: 1; /* equal width */
+  flex: 1;
   max-width: 80px;
 
   background: none;
   border: none;
-  font-size: 20px;
-  color: white;
+
+  font-size: 24px;   /* 🔥 bigger icons */
+  color: #333;
 
   cursor: pointer;
 
-  opacity: 0.6;
-  transform: scale(1);
+  opacity: 0.7;
   transition: 0.3s;
 }
 
-.bottom-nav button i {
-  display: block;
-  text-align: center;
-}
-
-/* Active nav */
 .bottom-nav button.active {
   opacity: 1;
   transform: scale(1.2);
-  color: #ffffff;
 }
 
-.bottom-nav button.active i {
-  text-shadow: 0 0 8px rgba(255,255,255,0.8);
-}
-
-/* Hover */
 .bottom-nav button:hover {
   opacity: 1;
   transform: scale(1.1);
@@ -191,7 +190,7 @@ canvas {
 /* Notification */
 .notification {
   position: fixed;
-  top: 30px;
+  top: 110px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -253,10 +252,6 @@ canvas {
   transition: 0.3s;
 }
 
-.chart-toggle button:hover {
-  background: rgba(255,255,255,0.35);
-}
-
 .chart-toggle button.active {
   background: rgba(255,255,255,0.6);
   color: black;
@@ -264,11 +259,6 @@ canvas {
 }
 
 /* Chart containers */
-#pieContainer,
-#trendContainer {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
 .hidden {
   opacity: 0;
   transform: translateY(10px);
@@ -290,14 +280,16 @@ canvas {
   text-align: left;
 }
 
-/* Top Header */
+/* 🔥 HEADER FIX */
 .top-header {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  width: 100%;
-  height: 90px;
+  width: 92%;
+  max-width: 420px;
+  height: 80px;
 
   display: flex;
   flex-direction: column;
@@ -307,34 +299,18 @@ canvas {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(15px);
 
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
 
   z-index: 1000;
 }
 
 .top-header h1 {
-  font-size: 40px;
+  font-size: 22px;  /* 🔥 fixed (was too big/small mismatch) */
   color: white;
   font-weight: 700;
 }
 
 .top-header p {
-  font-size: 13px;
+  font-size: 12px;
   color: rgba(255,255,255,0.85);
-}
-
-/* 🔥 MOBILE ZOOM EFFECT */
-@media (max-width: 500px) {
-  .container {
-    transform: scale(1.8); /* 🔥 MUCH MORE ZOOM */
-    transform-origin: top center;
-
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .app-wrapper {
-    padding-top: 80px;  /* push down from header */
-    padding-bottom: 200px; /* avoid nav overlap */
-  }
 }
